@@ -1,0 +1,17 @@
+{
+   "predef": ["angular"],
+   "unused": true,
+   "undef": true,
+   "devel": true,
+   "bitwise": true,
+   "camelcase": true,
+   "curly": true,
+   "eqeqeq": true,
+   "indent": 3,
+   "latedef": true,
+   "newcap": true,
+   "nonew": true,
+   "quotmark": "single",
+   "browser": true,
+   "strict": true
+}

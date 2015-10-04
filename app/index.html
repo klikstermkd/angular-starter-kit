@@ -1,0 +1,60 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+   <meta name="description" content="app description">
+
+   <!-- <base href="http://192.168.0.102:3000/"> -->
+
+   <title>app title</title>
+
+   <!-- build:css styles/vendor.css -->
+   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+   <!-- endbuild -->
+   <!-- build:css styles/app.css -->
+   <link href="styles/main.css" type="text/css" rel="stylesheet">
+   <!-- endbuild -->
+</head>
+<body ng-controller="AppController as app">
+
+   <!-- Static navbar -->
+   <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="app.menuToggle.isCollapsed = !app.menuToggle.isCollapsed">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">App name</a>
+         </div>
+         <div class="navbar-collapse no-collapse-transition" collapse="app.menuToggle.isCollapsed">
+            <ul class="nav navbar-nav">
+               <li><a ui-sref="home" ng-click="app.menuToggle.isCollapsed = true">Home</a></li>
+               <li><a ui-sref="page" ng-click="app.menuToggle.isCollapsed = true">Page</a></li>
+            </ul>
+         </div><!--/.nav-collapse -->
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="jumbotron">
+         <div ui-view></div>
+      </div>
+   </div> <!-- /container -->
+
+   <!-- build:js scripts/vendor.js -->
+   <script src="bower_components/angular/angular.min.js"></script>
+   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+   <!-- endbuild -->
+   <!-- build:js scripts/app.js -->
+   <script src="scripts/app.js"></script>
+   <script src="scripts/controllers/app.js"></script>
+   <script src="scripts/controllers/home.js"></script>
+   <script src="scripts/controllers/page.js"></script>
+   <!-- endbuild -->
+</body>
+</html>

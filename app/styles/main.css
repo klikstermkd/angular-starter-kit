@@ -1,0 +1,4 @@
+.no-collapse-transition {
+  -webkit-transition: height 0;
+  transition: height 0;
+}
